@@ -71,7 +71,17 @@ public class Bus extends Mobil implements Competing {
     public String toString() {
         return  this.typeAuto + ": " + this.brand + ", модель - " + this.model + ", V двигателя - " + this.engineVolume + ".";
     }
-
+    public static void printAuto (Bus[] buses) {
+        for (Bus el : buses) {
+            System.out.println(el);
+        }
+        System.out.println();
+        buses[0].startMoving();
+        buses[0].pitStop();
+        buses[0].finishMove();
+        buses[0].maxSpeed();
+        buses[0].bestTime();
+    }
 
 } // class **********************************************************************************************************
 

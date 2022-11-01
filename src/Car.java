@@ -73,7 +73,17 @@ public class Car extends Mobil implements Competing{
         System.out.println("Максимальная скорость " + MAX_SPEED_CAR + " км/ч.");
 
     }
-
+    public static void printAuto (Car[] cars) {
+        for (Car el : cars) {
+            System.out.println(el);
+        }
+        System.out.println();
+        cars[0].startMoving();
+        cars[0].pitStop();
+        cars[0].finishMove();
+        cars[0].maxSpeed();
+        cars[0].bestTime();
+    }
 
     @Override
     public boolean equals(Object o) {

@@ -69,6 +69,16 @@ public class Truck extends Mobil implements Competing{
     public String toString() {
         return  this.typeAuto + ": " + this.brand + ", модель - " + this.model + ", V двигателя - " + this.engineVolume + ".";
     }
-
+    public static void printAuto (Truck[] trucks) {
+        for (Truck el : trucks) {
+            System.out.println(el);
+        }
+        System.out.println();
+        trucks[0].startMoving();
+        trucks[0].pitStop();
+        trucks[0].finishMove();
+        trucks[0].maxSpeed();
+        trucks[0].bestTime();
+    }
 } // class **********************************************************************************************************
 
