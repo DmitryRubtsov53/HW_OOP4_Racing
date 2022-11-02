@@ -74,10 +74,10 @@ public class Bus extends Mobil implements Competing {
 //                System.out.println(el);
 //    }
 
-//    @Override
-//    public String toString() {
-//        return  this.typeAuto + ": " + this.brand + ", модель - " + this.model + ", V двигателя - " + this.engineVolume + ".";
-//    }
+    @Override
+    public String toString() {
+        return  this.typeAuto + ": " + this.brand + ", модель - " + this.model + ", V двигателя - " + this.engineVolume + ".";
+    }
     public static void printAuto (Bus[] buses) {
         for (Bus el : buses) {
             System.out.println(el);

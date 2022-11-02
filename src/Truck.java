@@ -72,10 +72,10 @@ public class Truck extends Mobil implements Competing{
 //           System.out.println(el);
 //    }
 
-//    @Override
-//    public String toString() {
-//        return  this.typeAuto + ": " + this.brand + ", модель - " + this.model + ", V двигателя - " + this.engineVolume + ".";
-//    }
+    @Override
+    public String toString() {
+        return  this.typeAuto + ": " + this.brand + ", модель - " + this.model + ", V двигателя - " + this.engineVolume + ".";
+    }
     public static void printAuto (Truck[] trucks) {
         for (Truck el : trucks) {
             System.out.println(el);

@@ -41,10 +41,5 @@ public class Main {
         System.out.print(semen);
         semen.driveBus(buses[0]);
 
-    } // main ********************************************************************************************
-//    public static void printAuto (Competing... competings) {
-//
-//
-//    }
-
+    }
 } // class Main ******************************************************************************************
