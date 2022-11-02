@@ -10,7 +10,7 @@ public class Driver <D extends Mobil & Competing> {
     }
 
     public void setFullName(String fullName) {
-        this.fullName = (fullName != null && !fullName.isEmpty() && !fullName.isBlank()) ? fullName : "Incognito";
+        this.fullName = (fullName != null && !fullName.isEmpty()) ? fullName : "Incognito";
     }
 
     public String getLicense() {
@@ -18,7 +18,7 @@ public class Driver <D extends Mobil & Competing> {
     }
 
     public void setLicense(String license) {
-        this.license = (license != null && !license.isEmpty() && !license.isBlank()) ? license : "B";
+        this.license = (license != null && !license.isBlank()) ? license : "B";
     }
 
     public int getExperience() {

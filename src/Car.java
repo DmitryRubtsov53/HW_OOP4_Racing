@@ -1,9 +1,7 @@
-import java.util.Objects;
-
 public class Car extends Mobil implements Competing{
 
-    String brand;
-    String model;
+    private String brand;
+    private String model;
     private double engineVolume;
     private String typeAuto;
     public static final double MAX_SPEED_CAR = 250;
@@ -21,17 +19,17 @@ public class Car extends Mobil implements Competing{
 // setters **********************************************************************************************
 
     public void setBrand(String brand) {
-        this.brand = (brand != null && !brand.isBlank() && !brand.isEmpty()) ? brand : "default";
+        this.brand = (brand != null && !brand.isBlank()) ? brand : "default";
     }
     public void setModel(String model) {
-        this.model = (model != null && !model.isBlank() && !model.isEmpty())? model : "default";
+        this.model = (model != null && !model.isBlank())? model : "default";
     }
     public void setEngineVolume(double engineVolume) {
         this.engineVolume = engineVolume != 0 ? engineVolume : 10;
     }
 
     public void setTypeAuto(String typeAuto) {
-        this.typeAuto = (typeAuto!= null && !typeAuto.isBlank() && !typeAuto.isEmpty())? typeAuto : "default";
+        this.typeAuto = (typeAuto!= null && !typeAuto.isBlank())? typeAuto : "default";
     }
     // constructor *******************************************************************************************
 
@@ -73,6 +71,18 @@ public class Car extends Mobil implements Competing{
         System.out.println("Максимальная скорость " + MAX_SPEED_CAR + " км/ч.");
 
     }
+
+//    @Override
+//    public void printAuto(Competing... competings) {
+//        for (Competing el : competings) {
+//            System.out.println(el);
+//    }
+
+    @Override
+    public String toString() {
+        return  this.typeAuto + ": " + this.brand + ", модель - " + this.model + ", V двигателя - " + this.engineVolume + ".";
+    }
+
     public static void printAuto (Car[] cars) {
         for (Car el : cars) {
             System.out.println(el);
@@ -85,23 +95,6 @@ public class Car extends Mobil implements Competing{
         cars[0].bestTime();
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Car cars = (Car) o;
-        return Double.compare(cars.engineVolume, engineVolume) == 0
-                && Objects.equals(brand, cars.brand) && Objects.equals(model, cars.model)
-                && Objects.equals(typeAuto, cars.typeAuto);
-    }
-    @Override
-    public int hashCode() {
-        return Objects.hash(brand, model, engineVolume, typeAuto);
-    }
-    @Override
-    public String toString() {
-        return  this.typeAuto + ": " + this.brand + ", модель - " + this.model + ", V двигателя - " + this.engineVolume + ".";
-    }
 } // class **********************************************************************************************************
 
 
